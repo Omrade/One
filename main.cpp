@@ -454,11 +454,39 @@ void main()
 	{
 		cout << "срабортал цикл" << endl;
 	}
-	*/
+	
 	for (int i = 0, j = 10; i < 10; i++, j--)
 	{
 		cout << "переменная i = " << i << endl;
 		cout << "переменная j = " << j << endl;
 	}
+	
+
+	//Урок №18 Ключевое слово "Brake"
+
+	for (int i = 0; ; i++)
+	{
+		cout << "Переменная i = " << i << endl;
+		if (i==5510)
+		{
+			break;
+		}
+	}
+
+	cout << "Конец цикла" << endl;
+	
+	
+	int i = 1;
+	while (true)
+	{
+		cout << "Переменная i = " << i << endl;
+		i++;
+		if (i == 600)
+		{
+			break;
+		}
+	}
+
+	*/
 	system("PAUSE");
 }
