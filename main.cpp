@@ -1,4 +1,5 @@
-#include<iostream>							//Библиотека iostream
+#include <iostream>							//Библиотека iostream
+#include <ctime>							//Бибилиотека ctime для "time(NULL)
 using namespace std;						//Пространство имён
 
 void main()
@@ -496,7 +497,7 @@ void main()
 		}
 		cout << "Переменная i = " << i << endl;
 	}
-	*/
+	
 	//Домашнее задание. Написать программу, которая выводит на экран прямоугольник символом *. 
 	//Высота и ширина задаётся пользователем.+
 	
@@ -521,8 +522,16 @@ void main()
 		cout << endl;
 	}
 	
-	cout << endl;
 	
+	cout << endl;
+	*/
+
+	//Генератор случайных чисел
+	
+	srand(time(NULL));
+
+	int a = rand() % 100;
+	cout << a << endl;
 
 	system("PAUSE");
 }
