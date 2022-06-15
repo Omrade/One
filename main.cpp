@@ -5,6 +5,7 @@ using namespace std;						//Пространство имён
 void main()
 {
 	setlocale(LC_ALL, "Ru");				//Команда для русского языка
+	srand(time(NULL));						//Команда для rand() - генерации случайных чисел
 	/*
 	//Урок №1 and 2
 	cout << "Програмируем хах" << endl;		//Вывод в консоль
@@ -524,14 +525,44 @@ void main()
 	
 	
 	cout << endl;
-	*/
+	
 
 	//Генератор случайных чисел
 	
-	srand(time(NULL));
-
-	int a = rand() % 100;
+	int a = rand() % 10 + 5;
 	cout << a << endl;
+	*/
 
+	//Заполнение массива случайными числами, в массиве не должно быть одинаковых значений
+	int const SIZE = 10;
+
+	int arr[SIZE];
+	bool alr;
+
+	for (int i = 0; i < SIZE;)
+	{
+		alr = false;
+		int newRandom = rand() % 20;
+		for (int j = 0; j < i; j++)
+		{
+			if (arr[j] == newRandom)
+			{
+				alr = true;
+				break;
+			}
+		}
+		if (!alr)
+		{
+			arr[i] = newRandom;
+			i++;
+		}
+	}
+		
+	for (int i = 0; i < SIZE; i++)
+	{
+		cout << arr[i] << endl;
+	}
+	
+		
 	system("PAUSE");
 }
