@@ -542,7 +542,7 @@ void main()
 	for (int i = 0; i < SIZE;)
 	{
 		alr = false;
-		int newRandom = rand() % 20;
+		int newRandom = rand() % 2000;
 		for (int j = 0; j < i; j++)
 		{
 			if (arr[j] == newRandom)
@@ -557,12 +557,22 @@ void main()
 			i++;
 		}
 	}
-		
+
 	for (int i = 0; i < SIZE; i++)
 	{
-		cout << arr[i] << endl;
+		cout << arr[i]<< endl;
 	}
 	
-		
+	int min = arr[0];
+	for (int i = 1; i < SIZE; i++)
+	{
+		if (arr[i] < min)
+		{
+			min = arr[i];
+		}
+	}
+
+	cout << "Наименьшее число в массиве " << min << endl;
+
 	system("PAUSE");
 }
